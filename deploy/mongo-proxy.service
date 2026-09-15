@@ -5,9 +5,9 @@ After=network.target
 [Service]
 Type=simple
 User=ec2-user
-Environment=MONGODB_URI=mongodb://usuario:senha@seu-host-mongo:27017
-Environment=MONGODB_DATABASE=mydb
-Environment=MONGODB_USERS_COLLECTION=users
+Environment=MONGODB_URI=mongodb://feliperaxz_db_user:FTN8HjBf0MDPnzQ2@187.125.64.54:27017
+Environment=MONGODB_DATABASE=condoflow
+Environment=MONGODB_USERS_COLLECTION=usuarios
 Environment=MONGODB_POOL_MAX_SIZE=50
 Environment=MONGODB_POOL_MIN_SIZE=2
 Environment=PROXY_API_KEY=bananinha123
