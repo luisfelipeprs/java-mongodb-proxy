@@ -1,0 +1,19 @@
+[Unit]
+Description=Mongo Proxy Service
+After=network.target
+
+[Service]
+Type=simple
+User=ec2-user
+Environment=MONGODB_URI=mongodb://usuario:senha@seu-host-mongo:27017
+Environment=MONGODB_DATABASE=mydb
+Environment=MONGODB_USERS_COLLECTION=users
+Environment=MONGODB_POOL_MAX_SIZE=50
+Environment=MONGODB_POOL_MIN_SIZE=2
+Environment=PROXY_API_KEY=bananinha123
+ExecStart=/usr/bin/java -jar /opt/mongo-proxy/mongo-proxy-0.1.jar
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
